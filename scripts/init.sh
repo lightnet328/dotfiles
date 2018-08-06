@@ -11,7 +11,12 @@ install_fomula() {
   brew install zsh
 }
 
+install_anyenv() {
+  git clone https://github.com/riywo/anyenv ~/.anyenv
+}
+
 init() {
   install_brew
   install_fomula
+  install_anyenv
 }
