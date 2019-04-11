@@ -14,6 +14,7 @@ download() {
 load() {
   source "$SCRIPTS/initialize.sh"
   source "$SCRIPTS/deploy.sh"
+  source "$SCRIPTS/configure.sh"
 }
 
 main() {
@@ -22,6 +23,7 @@ main() {
 
   initialize
   deploy
+  configure
 
   exit 0
 }
