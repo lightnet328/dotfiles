@@ -5,22 +5,22 @@ FILES="$DOTPATH/files"
 SCRIPTS="$DOTPATH/scripts"
 REPOSITORY="git@github.com:lightnet328/dotfiles.git"
 
-install() {
+download() {
   if [ ! -d $DOTPATH ]; then
     git clone "$REPOSITORY" "$DOTPATH"
   fi
 }
 
 load() {
-  source "$SCRIPTS/init.sh"
+  source "$SCRIPTS/initialize.sh"
   source "$SCRIPTS/deploy.sh"
 }
 
 main() {
-  install
+  download
   load
 
-  init
+  initialize
   deploy
 
   exit 0

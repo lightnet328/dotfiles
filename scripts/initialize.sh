@@ -9,13 +9,15 @@ install_fomula() {
   brew install wget
   brew install zplug
   brew install zsh
+
+  brew cask install iterm2
 }
 
 install_anyenv() {
   git clone https://github.com/riywo/anyenv ~/.anyenv
 }
 
-init() {
+initialize() {
   install_brew
   install_fomula
   install_anyenv
