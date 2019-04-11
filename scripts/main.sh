@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -u
 DOTPATH="$HOME/dotfiles"
 FILES="$DOTPATH/files"
 SCRIPTS="$DOTPATH/scripts"
