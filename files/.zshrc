@@ -1,12 +1,6 @@
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
-# Appearance
-## Title Bar (iTerm2)
-echo -en "\033]6;1;bg;red;brightness;25\a"
-echo -en "\033]6;1;bg;green;brightness;25\a"
-echo -en "\033]6;1;bg;blue;brightness;25\a"
-
 # Environment Variables
 ## Editor
 export EDITOR="vim"
