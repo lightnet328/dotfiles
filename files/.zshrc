@@ -146,7 +146,7 @@ zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
 zplug "stedolan/jq", as:command, from:gh-r, rename-to:jq
 
 ## ghq
-zplug "motemen/ghq", as:command, from:gh-r, rename-to:ghq
+zplug "x-motemen/ghq", as:command, from:gh-r, rename-to:ghq
 
 ## Install required packages
 zplug check --verbose || zplug install
