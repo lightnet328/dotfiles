@@ -13,18 +13,20 @@ download() {
 }
 
 load() {
-  source "$SCRIPTS/deploy.sh"
   source "$SCRIPTS/install.sh"
+  source "$SCRIPTS/deploy.sh"
   source "$SCRIPTS/configure.sh"
+  source "$SCRIPTS/initialize.sh"
 }
 
 main() {
   download
   load
 
-  deploy
   install
+  deploy
   configure
+  initialize
 
   exit 0
 }
