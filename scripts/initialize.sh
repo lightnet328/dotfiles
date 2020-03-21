@@ -16,6 +16,7 @@ install_fomula() {
 }
 
 install_fisher() {
+  set XDG_CONFIG_HOME ~/.config
   curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
   fish -c fisher
 }

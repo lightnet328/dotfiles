@@ -2,6 +2,9 @@
 ## Editor
 set -x EDITOR vim
 
+## XDG Base Directory
+set -x XDG_CONFIG_HOME $HOME/.config
+
 ## bin
 set -x PATH /usr/local/bin $PATH
 
