@@ -1,4 +1,3 @@
-#!/bin/bash
 set -u
 DOTPATH="$HOME/dotfiles"
 FILES="$DOTPATH/files"
@@ -12,8 +11,8 @@ download() {
 }
 
 load() {
-  source "$SCRIPTS/initialize.sh"
   source "$SCRIPTS/deploy.sh"
+  source "$SCRIPTS/initialize.sh"
   source "$SCRIPTS/configure.sh"
 }
 
@@ -21,8 +20,8 @@ main() {
   download
   load
 
-  initialize
   deploy
+  initialize
   configure
 
   exit 0

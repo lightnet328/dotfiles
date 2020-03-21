@@ -7,10 +7,17 @@ install_fomula() {
   brew install git
   brew install neovim
   brew install wget
-  brew install zplug
-  brew install zsh
+  brew install jq
+  brew install fzf
+  brew install ghq
+  brew install fish
 
   brew cask install iterm2
+}
+
+install_fisher() {
+  curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  fish -c fisher
 }
 
 install_anyenv() {
@@ -20,5 +27,6 @@ install_anyenv() {
 initialize() {
   install_brew
   install_fomula
+  install_fisher
   install_anyenv
 }

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 configure_iterm2() {
   open -g "/Applications/iTerm.app" && sleep 1
   defaults write com.googlecode.iterm2 PromptOnQuit -bool false
