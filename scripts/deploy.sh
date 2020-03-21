@@ -1,18 +1,8 @@
-get_files() {
-  for pathname in "$2"/*; do
-    if [ -d "$pathname" ]; then
-      get_files "$1" "$pathname"
-    else
-      echo "${pathname/$1}"
-    fi
-  done
-}
-
 deploy() {
-  local FILES="$DOTPATH/files"
-  for f in $(get_files "$FILES" "$FILES")
+  for f in $(find $FILES -type f)
   do
-    mkdir -p $(dirname "$HOME$f")
-    ln -snfv "$FILES$f" "$HOME$f"
+    filepath="${f/$FILES}"
+    mkdir -p $(dirname "$f")
+    ln -snfv "$FILES$filepath" "$HOME$filepath"
   done
 }
