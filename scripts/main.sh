@@ -7,6 +7,8 @@ REPOSITORY="git@github.com:lightnet328/dotfiles.git"
 download() {
   if [ ! -d $DOTPATH ]; then
     git clone "$REPOSITORY" "$DOTPATH"
+  else
+    git pull
   fi
 }
 
