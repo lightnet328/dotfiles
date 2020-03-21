@@ -1,7 +1,7 @@
-configure_fisher() {
+initialize_fisher() {
   fish -c fisher
 }
 
-configure() {
-  configure_fisher
+initialize() {
+  initialize_fisher
 }
