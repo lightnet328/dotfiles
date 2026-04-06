@@ -1,0 +1,9 @@
+.DS_Store
+
+# Machine-local git config (credentials, per-dir includeIf, scalar/maintenance, etc.)
+files/.gitconfig.local
+
+# Temporary / personal fish functions not to be shared
+files/.config/fish/functions/claude-remote.fish
+files/.config/fish/functions/db_*.fish
+files/.config/fish/functions/ask-other.fish

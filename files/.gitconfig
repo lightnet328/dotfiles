@@ -1,5 +1,37 @@
 [user]
-    name = lightnet328
+    name = Yutaro Kido
     email = lightnet328@gmail.com
 [ghq]
     root = ~/Codes
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[pull]
+    rebase = false
+    ff = only
+    default = current
+[push]
+    default = current
+[init]
+    defaultBranch = main
+[core]
+    ignorecase = false
+    fsmonitor = true
+    untrackedcache = true
+[alias]
+    graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+[diff "lockb"]
+    textconv = bun
+    binary = true
+[credential "https://github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/opt/homebrew/bin/gh auth git-credential
+[include]
+    path = ~/.gitconfig.local

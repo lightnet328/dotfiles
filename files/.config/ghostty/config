@@ -1,0 +1,7 @@
+confirm-close-surface = false
+quit-after-last-window-closed = true
+font-family = Hack Nerd Font Mono
+font-family = "Hiragino Kaku Gothic ProN"
+font-size = 13
+theme = "Dark+"
+macos-option-as-alt = left
