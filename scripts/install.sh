@@ -43,6 +43,7 @@ install_formulae() {
 install_casks() {
   brew install --cask ghostty
   brew install --cask font-hack-nerd-font
+  brew install --cask obsidian
 }
 
 install_fisher() {
