@@ -8,3 +8,7 @@ terraform = "1.5.2"
 
 [settings]
 idiomatic_version_file = true
+
+[settings.python]
+# python 3.10.13 predates GitHub artifact attestations; disable to allow install.
+github_attestations = false
