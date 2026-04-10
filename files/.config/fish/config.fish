@@ -137,6 +137,7 @@ abbr -a -- dex 'docker exec -it'
 ## Utility
 abbr -a -- cu 'cursor .'
 abbr -a -- cl 'claude --dangerously-skip-permissions'
+abbr -a -- co 'codex --yolo'
 abbr -a -- o 'open .'
 abbr -a -- p 'pnpm'
 abbr -a -- y 'yarn'
