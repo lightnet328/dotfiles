@@ -1,0 +1,48 @@
+{
+  "commands": [
+    {
+      "name": "Save Project Snapshot",
+      "description": "Save the current cmux layout using the repo or directory name",
+      "keywords": ["crex", "save", "snapshot", "resurrect"],
+      "command": "crex save \"$(basename \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\")\""
+    },
+    {
+      "name": "Preview Project Snapshot Restore",
+      "description": "Show the restore commands for the current repo or directory without running them",
+      "keywords": ["crex", "restore", "preview", "dry-run"],
+      "command": "crex restore \"$(basename \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\")\" --dry-run"
+    },
+    {
+      "name": "Restore Project Snapshot",
+      "description": "Restore the saved layout for the current repo or directory",
+      "keywords": ["crex", "restore", "snapshot", "resurrect"],
+      "command": "crex restore \"$(basename \"$(git rev-parse --show-toplevel 2>/dev/null || pwd)\")\" --mode add",
+      "confirm": true
+    },
+    {
+      "name": "List Saved Snapshots",
+      "description": "List all saved crex layouts",
+      "keywords": ["crex", "list", "snapshot", "layouts"],
+      "command": "crex list"
+    },
+    {
+      "name": "Export Workspace Blueprint",
+      "description": "Export the live workspace into a crex Markdown blueprint",
+      "keywords": ["crex", "export", "blueprint", "markdown"],
+      "command": "crex export-to-md"
+    },
+    {
+      "name": "Import Workspace Blueprint",
+      "description": "Create missing workspaces from the current crex Markdown blueprint",
+      "keywords": ["crex", "import", "blueprint", "markdown"],
+      "command": "crex import-from-md",
+      "confirm": true
+    },
+    {
+      "name": "Reload cmux Config",
+      "description": "Reload cmux settings and custom commands",
+      "keywords": ["cmux", "reload", "config"],
+      "command": "cmux reload-config"
+    }
+  ]
+}

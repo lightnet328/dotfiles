@@ -35,12 +35,15 @@ install_formulae() {
   brew install wget
   brew install tree
   brew install colordiff
+  brew tap drolosoft/tap
+  brew install cmux-resurrect
 
   # Runtime
   brew install oven-sh/bun/bun
 }
 
 install_casks() {
+  brew install --cask cmux
   brew install --cask ghostty
   brew install --cask font-hack-nerd-font
   brew install --cask obsidian

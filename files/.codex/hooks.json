@@ -1,0 +1,37 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/codex-cmux-hook.ts session-start || echo '{}'",
+            "timeout": 20,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/codex-cmux-hook.ts stop || echo '{}'",
+            "timeout": 20,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/codex-cmux-hook.ts prompt-submit || echo '{}'",
+            "timeout": 20,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  }
+}

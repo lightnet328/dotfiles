@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true",
+    "CLAUDE_CODE_NO_FLICKER": "1"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/claude-cmux-hook.ts session-start || echo '{}'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/claude-cmux-hook.ts prompt-submit || echo '{}'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/claude-cmux-hook.ts stop || echo '{}'"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "command -v bun >/dev/null 2>&1 && bun /Users/lightnet328/.local/bin/claude-cmux-hook.ts notification || echo '{}'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node /Users/lightnet328/.claude/statusline.js"
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": false,
+    "dinii-kpi@dinii-plugin-market": true,
+    "rust-analyzer-lsp@claude-plugins-official": false,
+    "tech-article-writer@dinii-plugin-market": false,
+    "customer-insights@dinii-plugin-market": true,
+    "deep-plan@dinii-plugin-market": false,
+    "member-lookup@dinii-plugin-market": true,
+    "my-insights@dinii-plugin-market": false,
+    "slack@claude-plugins-official": true,
+    "persona-analyzer@dinii-plugin-market": true,
+    "frontend-design@claude-plugins-official": true,
+    "bakuraku-expense@dinii-plugin-market": true,
+    "dinii-slides@dinii-plugin-market": false,
+    "quarterly-self-eval@dinii-plugin-market": false
+  },
+  "extraKnownMarketplaces": {
+    "dinii-plugin-market": {
+      "source": {
+        "source": "github",
+        "repo": "dinii-inc/dinii-plugin-market"
+      }
+    }
+  },
+  "language": "日本語",
+  "cleanupPeriodDays": 36500,
+  "skipDangerousModePermissionPrompt": true,
+  "feedbackSurveyState": {
+    "lastShownTime": 1754087130188
+  },
+  "mcpServers": {
+    "slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp"
+    },
+    "cmux": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "cmux-mcp"
+      ]
+    }
+  },
+  "effortLevel": "high"
+}

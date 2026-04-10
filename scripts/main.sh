@@ -16,6 +16,7 @@ load() {
   source "$SCRIPTS/install.sh"
   source "$SCRIPTS/deploy.sh"
   source "$SCRIPTS/initialize.sh"
+  source "$SCRIPTS/setup_cmux_mcp.sh"
 }
 
 main() {
@@ -25,6 +26,7 @@ main() {
   install
   deploy
   initialize
+  setup_cmux_mcp
 
   exit 0
 }

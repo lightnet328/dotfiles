@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux-settings.schema.json",
+  "schemaVersion": 1,
+  "automation": {
+    "socketControlMode": "automation"
+  },
+  "shortcuts": {
+    "bindings": {
+      "focusLeft": "opt+cmd+[",
+      "focusRight": "opt+cmd+]"
+    }
+  }
+}
