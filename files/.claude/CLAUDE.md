@@ -28,13 +28,6 @@
 - Prefer Codex for large file writes and edits because direct Claude Code writes can stall on streaming timeouts.
 - Use direct Read/Write/Edit/Grep-style tools only when Codex is unavailable or clearly not a good fit.
 
-## cmux Workspace
-- If `CMUX_WORKSPACE_ID` is set, rename the current cmux workspace near the start of the task.
-- Derive the name from the current repository root. Use the repository basename by default, and append the branch name only when it is not `main`, `master`, or `trunk`.
-- Use the cmux CLI directly, for example: `cmux rename-workspace --workspace "$CMUX_WORKSPACE_ID" "<name>"`.
-- Run the rename again after moving to a different repository root.
-- Skip it silently if cmux is unavailable or the rename fails.
-
 ## Workflow
 - Run `biome check --write` before committing if Biome is configured in the project.
 - Run a type check such as `bunx tsc --noEmit` or the project-specific command to verify changes.
